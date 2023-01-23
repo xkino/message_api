@@ -51,6 +51,8 @@ class MessageServiceImpl(
                 )
             }
         }
+
+
         throw MessageEmptyException()
     }
 }
