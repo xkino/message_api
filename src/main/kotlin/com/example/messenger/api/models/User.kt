@@ -39,9 +39,9 @@ class User(
 ) {
     // отправленные сообщения
     @OneToMany(mappedBy = "sender", targetEntity = Message::class)
-    private var sentMessages: List<Message>? = null
+    var sentMessages: List<Message>? = null
 
     // полученные сообщения
     @OneToMany(mappedBy = "recipient", targetEntity = Message::class)
-    private var receivedMessages: List<Message>? = null
+    var receivedMessages: List<Message>? = null
 }

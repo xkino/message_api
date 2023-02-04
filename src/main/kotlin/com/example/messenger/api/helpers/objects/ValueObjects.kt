@@ -28,5 +28,5 @@ data class ConversationVO(
 )
 
 data class ConversationListVO(
-    val conversations: List<String>,
+    val conversations: List<ConversationVO>,
 )

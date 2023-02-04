@@ -10,7 +10,7 @@ class Conversation(
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
-    open var id: Long? = null,
+    var id: Long? = null,
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "sender_id", referencedColumnName = "id")
@@ -25,5 +25,5 @@ class Conversation(
 
     ) {
     @OneToMany(mappedBy = "conversation", targetEntity = Message::class)
-    private var messages: List<Message>? = null
+    var messages: List<Message>? = null
 }
